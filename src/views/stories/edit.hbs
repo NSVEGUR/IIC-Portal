@@ -1,0 +1,468 @@
+<h3>Edit Story</h3>
+<div class="row">
+    <form action="/stories/{{story._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title" value="{{story.title}}">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <!--<div class="row">
+            <div class="input-field">
+                <input type="text" id="title2" name="title2">
+                <label for="title2">Title2</label>
+            </div>
+        </div>-->
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status4" name="status4">
+                    <option value="public4" selected>Public4</option>
+                    <option value="private4">Private4</option>
+                </select>
+                <label for="status4">Status4</label>
+            </div>
+        </div>
+
+        <!--<div class="row">
+            <div class="input-field">
+                <select id="status" name="status">
+                    {{#select story.status}}
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                    {{/select}}
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>-->
+        
+        <div class="row">
+            <div class="input-field">
+                <select id="status1" name="status1">
+                    <option value="public1" selected>Public1</option>
+                    <option value="private1">Private1</option>
+                </select>
+                <label for="status1">Status1</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status2" name="status2">
+                    <option value="public2" selected>Public2</option>
+                    <option value="private2">Private2</option>
+                </select>
+                <label for="status2">Status2</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status3" name="status3">
+                    <option value="public3" selected>Public3</option>
+                    <option value="private3">Private3</option>
+                </select>
+                <label for="status3">Status3</label>
+            </div>
+        </div>
+
+<!-- Here goes real input-->
+
+        <!-- Title2 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title2" name="title2">
+                <label for="title2">Name of the Innovation Generated with the Support of HEI</label>
+            </div>
+        </div>
+
+        <!-- Status4 is used here -->
+        <!-- <div class="row">
+            <div class="input-field">
+                <select id="status4" name="status4">
+                    <option value="Product innovation" >Product innovation</option>
+                    <option value="Process innovation" >Process innovation</option>
+                    <option value="Service innovation" >Service innovation</option>
+                    <option value="Market place Innovation"> Market place Innovation</option>
+                    <option value="Reverse Engineering" >Reverse Engineering</option>
+                    <option value="Management Process" >Management Process</option>
+                </select>
+                <label for="status4">Type of Innovation</label>
+            </div>
+        </div>-->
+
+        <!-- Status19 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status19" name="status19">
+                    <option value="Product innovation">Product innovation</option>
+                    <option value="Process innovation">Process innovation</option>
+                    <option value="Service innovation">Service innovation</option>
+                    <option value="Market place Innovation">Market place Innovation</option>
+                    <option value="Reverse Engineering">Reverse Engineering</option>
+                    <option value="Management Process">Management Process</option>
+                </select>
+                <label for="status19">Type of Innovation</label>
+            </div>
+        </div>
+
+        <!-- Status5 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status5" name="status5">
+                    <option value="Technological innovation" >Technological innovation</option>
+                    <option value="Non-Technological / Social / Community Innovation">Non-Technological / Social / Community Innovation</option>
+                </select>
+                <label for="status5">Nature of Innovation</label>
+            </div>
+        </div>
+
+        <!-- Status6 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status6" name="status6">
+                    <option value="IP/Patented Technology" >IP/Patented Technology</option>
+                    <option value="Non-Patented Technology">Non-Patented Technology</option>
+                </select>
+                <label for="status6">Type of Technology</label>
+            </div>
+        </div>
+
+        <!-- Title3 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title3" name="title3">
+                <label for="title3">Name of the I/E Facility at HEI Supported for the Innovation Development</label>
+            </div>
+        </div>
+
+        <!-- Status20 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status20" name="status20">
+                    <option value="Faculty" >Faculty</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Student" >Student</option>
+                    <option value="Faculty and Student">Faculty and Student</option>
+                    <option value="Incubatee Entrepreneur" >Incubatee Entrepreneur</option>
+                    <option value="Alumini Entrepreneur">Alumini Entrepreneur</option>
+                    <option value="Innovator/ Entrepreeur External to institute">Innovator/ Entrepreeur External to institute</option>
+                </select>
+                <label for="status20">Innovation Developed by </label>
+            </div>
+        </div>
+
+        <!-- Title4 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title4" name="title4">
+                <label for="title4">Name of the Principal Innovator</label>
+            </div>
+        </div>
+
+        <!-- Status7 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status7" name="status7">
+                    <option value="Faculty" >Faculty</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Student" >Student</option>
+                    <option value="Faculty and Student">Faculty and Student</option>
+                    <option value="Incubatee Entrepreneur" >Incubatee Entrepreneur</option>
+                    <option value="Alumini Entrepreneur">Alumini Entrepreneur</option>
+                    <option value="Innovator/ Entrepreeur External to institute">Innovator/ Entrepreeur External to institute</option>
+                </select>
+                <label for="status7">Principal Innovator type</label>
+            </div>
+        </div>
+
+        <!-- Status8 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status8" name="status8">
+                    <option value="Male3" >Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                </select>
+                <label for="status8">Gender of Principal Innovator</label>
+            </div>
+        </div>
+
+        <!-- Title5 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title5" name="title5">
+                <label for="title5">Email of Principal Innovator</label>
+            </div>
+        </div>
+
+        <!-- Title6 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title6" name="title6">
+                <label for="title6">Contact of Principal Innovator</label>
+            </div>
+        </div>
+
+        <!-- Title7 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title7" name="title7">
+                <label for="title7">Name of the Co-Innovator</label>
+            </div>
+        </div>
+
+        <!-- Status9 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status9" name="status9">
+                    <option value="Faculty" >Faculty</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Student" >Student</option>
+                    <option value="Faculty and Student">Faculty and Student</option>
+                    <option value="Incubatee Entrepreneur" >Incubatee Entrepreneur</option>
+                    <option value="Alumini Entrepreneur">Alumini Entrepreneur</option>
+                    <option value="Innovator/ Entrepreeur External to institute">Innovator/ Entrepreeur External to institute</option>
+                </select>
+                <label for="status9">Type of Co-Innovator</label>
+            </div>
+        </div>
+
+        <!-- Status21 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status21" name="status21">
+                    <option value="Male3" >Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                </select>
+                <label for="status21">Gender of Co-Innovator</label>
+            </div>
+        </div>
+
+        <!-- Title8 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title8" name="title8">
+                <label for="title8">Email of the Co-Innovator</label>
+            </div>
+        </div>
+
+        <!-- Title9 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title9" name="title9">
+                <label for="title9">Contact of the Co-Innovator</label>
+            </div>
+        </div>
+
+        <!-- Status10 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status10" name="status10">
+                    <option value="TRL 0" >TRL 0: Idea, Unproven Concept, no Testing has been performed.</option>
+                    <option value="TRL 1" >TRL 1: Basic research. Prrincipal postulated and observed but no experimental proof available.</option>
+                    <option value="TRL 2" >TRL 2: Technologhy formulation. Concept and application have been formulated.</option>
+                    <option value="TRL 3" >TRL 3: Applied Research. First Laboratory Test Completed: proof of Concept.</option>
+                    <option value="TRL 4" >TRL 4: Small scale prototype tested in intended environment</option>
+                    <option value="TRL 5" >TRL 5: Large scale Prototype system tested in intended environment.</option>
+                    <option value="TRL 6" >TRL 6: Prototype system tested in intended environment close to expected performance.</option>
+                    <option value="TRL 7" >TRL 7: Demonstration system operating in operational environment at pre- commercial scaler</option>
+                    <option value="TRL 8" >TRL 8: First of kind Commercial system. manufacturing issues solved.</option>
+                    <option value="TRL 9" >TRL 9: Full commercial application, technology available for consumers.</option>
+                </select>
+                <label for="status10">Stage of Innovation/Stage of TRL at which it started receiving the Support from HEI during the FY 2019-20 </label>
+            </div>
+        </div>
+
+        <!-- Status11 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status11" name="status11">
+                    <option value="TRL 0" >TRL 0: Idea, Unproven Concept, no Testing has been performed.</option>
+                    <option value="TRL 1" >TRL 1: Basic research. Prrincipal postulated and observed but no experimental proof available.</option>
+                    <option value="TRL 2" >TRL 2: Technologhy formulation. Concept and application have been formulated.</option>
+                    <option value="TRL 3" >TRL 3: Applied Research. First Laboratory Test Completed: proof of Concept.</option>
+                    <option value="TRL 4" >TRL 4: Small scale prototype tested in intended environment</option>
+                    <option value="TRL 5" >TRL 5: Large scale Prototype system tested in intended environment.</option>
+                    <option value="TRL 6" >TRL 6: Prototype system tested in intended environment close to expected performance.</option>
+                    <option value="TRL 7" >TRL 7: Demonstration system operating in operational environment at pre- commercial scaler</option>
+                    <option value="TRL 8" >TRL 8: First of kind Commercial system. manufacturing issues solved.</option>
+                    <option value="TRL 9" >TRL 9: Full commercial application, technology available for consumers.</option>
+                </select>
+                <label for="status11">Stage of Innovation/Stage of TRL reached as on 31st March 2020 </label>
+            </div>
+        </div>
+
+        <!-- Status12 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status12" name="status12">
+                    <option value="Innovation Development Dropped" >Innovation Development Dropped </option>
+                    <option value="Innovation Development Ongoing">Innovation Development Ongoing </option>
+                    <option value="Innovation Development Completed" >Innovation Development Completed </option>
+                    <option value="Innovation adopted and Implemented at Ground">Innovation adopted and Implemented at Ground </option>
+                </select>
+                <label for="status12">What is the current status of Pre-Incubation/Incubation Support to Innovation as on 31st March 2020</label>
+            </div>
+        </div>
+
+        <!-- Status13 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status13" name="status13">
+                    <option value="Yes" >Yes</option>
+                    <option value="No" >No</option>
+                </select>
+                <label for="status13">Had the innovation received any award/recognition at state/national/ international level during the period FY 2019-20 ?</label>
+            </div>
+        </div>
+
+        <!-- Title10 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title10" name="title10">
+                <label for="title10">Award / Position / Recognition Secured</label>
+            </div>
+        </div>
+
+        <!-- Title11 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title11" name="title11">
+                <label for="title11">Agnecy Name</label>
+            </div>
+        </div>
+
+        <!-- Status14 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status14" name="status14">
+                    <option value="Govt. Agency (Central)" >Govt. Agency (Central)</option>
+                    <option value="Govt. Agency (State)">Govt. Agency (State)</option>
+                    <option value="Educational Institution" >Educational Institution </option>
+                    <option value="Corporate/industry Association">Corporate/industry Association</option>
+                    <option value="Non Govt. Agency" >Non Govt. Agency</option>
+                    <option value="International Agency">International Agency</option>
+                </select>
+                <label for="status14">Agency Type</label>
+            </div>
+        </div>
+
+        <!-- Status15 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status15" name="status15">
+                    <option value="Yes" >Yes</option>
+                    <option value="No" >No</option>
+                </select>
+                <label for="status15">Had the Innovation Converted into Venture/Startup/SME Unit during the financial period 2019-20?</label>
+            </div>
+        </div>
+
+        <!-- Status16 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status16" name="status16">
+                    <option value="Yes" >Yes</option>
+                    <option value="No" >No</option>
+                </select>
+                <label for="status16">Had Centre/institute provided any Financial support (either own resource or fund received from agencies) in terms of Seed Grant/Fund Support to Idea / Prototype / Innovations Development during the financial period 2019-20</label>
+            </div>
+        </div>
+
+        <!-- Title12 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title12" name="title12">
+                <label for="title12">Grant Amount in Rs.</label>
+            </div>
+        </div>
+
+        <!-- Status17 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status17" name="status17">
+                    <option value="Yes" >Yes</option>
+                    <option value="No" >No</option>
+                </select>
+                <label for="status17">Had the Innovations raised any Seed fund/Angel Investment/VC during the period of receiving pre-incubation/incubation support at your Pre-incubation/incubation or HEI during the financial period 2019-20</label>
+            </div>
+        </div>
+
+        <!-- Title13 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title13" name="title13">
+                <label for="title13">Investement Agency Name</label>
+            </div>
+        </div>
+
+        <!-- Status22 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status22" name="status22">
+                    <option value="Govt. Agency (Central)" >Govt. Agency (Central)</option>
+                    <option value="Govt. Agency (State)">Govt. Agency (State)</option>
+                    <option value="Educational Institution" >Educational Institution </option>
+                    <option value="Corporate/industry Association">Corporate/industry Association</option>
+                    <option value="Non Govt. Agency" >Non Govt. Agency</option>
+                    <option value="International Agency">International Agency</option>
+                </select>
+                <label for="status22">Investement Agnecy Type</label>
+            </div>
+        </div>
+        
+
+        <!-- Title14 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title14" name="title14">
+                <label for="title14">Total Investement Amount in Rs.</label>
+            </div>
+        </div>
+
+        <!-- Title15 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title15" name="title15">
+                <label for="title15">Date of Investment Raised </label>
+            </div>
+        </div>
+
+        <!-- Status18 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <select id="status18" name="status18">
+                    <option value="Yes" >Yes</option>
+                    <option value="No" >No</option>
+                </select>
+                <label for="status18">Had the Pre-incubation/Incubation Centre/HEI received any income/revenue from Idea/Prototype/Innovations for the pre-incubation/incubation support and the services offered by Pre-incubation/incubation or institute during the financial period 2019-20</label>
+            </div>
+        </div>
+
+        <!-- Title16 is used here -->
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title16" name="title16">
+                <label for="title16">Amount Received in Rs.</label>
+            </div>
+        </div>
+
+<!-- Till here-->
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell Us Your Story:</h5>
+                <textarea id="body" name="body">{{story.body}}</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

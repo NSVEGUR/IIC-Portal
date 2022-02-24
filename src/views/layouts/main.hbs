@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>IIC - IIITDM Portal</title>
+</head>
+
+<body>
+    {{> _header}}
+    {{> _add_btn}}
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js"
+        integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
+
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'))
+        M.FormSelect.init(document.querySelector('#status'))
+        M.FormSelect.init(document.querySelector('#status1'))
+        M.FormSelect.init(document.querySelector('#status2'))
+        M.FormSelect.init(document.querySelector('#status3'))
+        M.FormSelect.init(document.querySelector('#status4'))
+        M.FormSelect.init(document.querySelector('#status5'))
+        M.FormSelect.init(document.querySelector('#status6'))
+        M.FormSelect.init(document.querySelector('#status7'))
+        M.FormSelect.init(document.querySelector('#status8'))
+        M.FormSelect.init(document.querySelector('#status9'))
+        M.FormSelect.init(document.querySelector('#status10'))
+        M.FormSelect.init(document.querySelector('#status11'))
+        M.FormSelect.init(document.querySelector('#status12'))
+        M.FormSelect.init(document.querySelector('#status13'))
+        M.FormSelect.init(document.querySelector('#status14'))
+        M.FormSelect.init(document.querySelector('#status15'))
+        M.FormSelect.init(document.querySelector('#status16'))
+        M.FormSelect.init(document.querySelector('#status17'))
+        M.FormSelect.init(document.querySelector('#status18'))
+        M.FormSelect.init(document.querySelector('#status19'))
+        M.FormSelect.init(document.querySelector('#status20'))
+        M.FormSelect.init(document.querySelector('#status21'))
+        M.FormSelect.init(document.querySelector('#status22'))
+
+        CKEDITOR.replace('body', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
+    </script>
+</body>
+
+</html>
