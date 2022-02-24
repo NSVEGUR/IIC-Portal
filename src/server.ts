@@ -14,7 +14,7 @@ mongoose.connect(db).then(con => {
 })
 
 
-const port = config.PORT || 8000;
+const port = config.PORT || 3000;
 
 
 //Listening to the server

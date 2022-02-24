@@ -25,15 +25,11 @@ const login = function (req: Request, res: Response, next: NextFunction) {
 	});
 }
 
-const autoLogin = catchAsync(async function (req: Request, res: Response, next: NextFunction) {
-	if (!req.user) {
-		return res.render('login', {
-			layout: 'login',
-		});
-	} else {
-		const stories = await StoryModel.find({ user: req.user }).lean()
+const autoLogin = catchAsync(async function (req: any, res: Response, next: NextFunction) {
+	{
+		const stories = await StoryModel.find({ user: req.user.id }).lean()
 		res.render('dashboard', {
-			name: req.user,
+			name: req.user.firstName,
 			stories,
 		})
 	}

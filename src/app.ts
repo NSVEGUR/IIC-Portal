@@ -7,16 +7,16 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import methodOverride from 'method-override';
 import ExpressMongoSanitize from 'express-mongo-sanitize';
-import { engine } from 'express-handlebars';
 import session from 'express-session';
 import xss from 'xss-clean';
 import hpp from 'hpp';
+import expressLayouts from 'express-ejs-layouts';
 const MongoStore = require('connect-mongo')(session);
 import AppError from './util/appError.util';
 import errorHandler from './controller/error.controller';
 import authRouter from './routes/auth.route';
 import indexRouter from './routes/index.route';
-import hbs from './util/hbs.util';
+import storyRouter from './routes/story.route';
 
 
 //Configuring passport
@@ -59,15 +59,15 @@ app.use(hpp({
 }));
 
 
-// Handlebars
-app.engine('handlebars', engine({
-	helpers: hbs,
-	defaultLayout: 'main',
-	extname: '.hbs',
-	layoutsDir: './views/layouts'
-}));
-app.set('view engine', '.hbs');
-app.set('views', './views');
+//View Engine
+app.use(expressLayouts);
+app.set('layout', path.join(__dirname, 'views/layouts/main'));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Sessions
 app.use(
@@ -87,14 +87,18 @@ app.use(passport.session());
 app.use(function (req, res, next) {
 	res.locals.user = req.user || null
 	next();
+});
+
+
+app.get('/', function (req, res, next) {
+	res.render('login');
 })
 
-// Static folder
-app.use(express.static(path.join(__dirname, 'public')))
 
-// Routes
-app.use('/', indexRouter);
-app.use('/auth', authRouter);
+// // Routes
+// app.use('/', indexRouter);
+// app.use('/auth', authRouter);
+// app.use('/stories', storyRouter);
 
 //UNUSED ROUTES MIDDLEWARE
 app.use('*', (req: Request, res: Response, next: NextFunction) => {
