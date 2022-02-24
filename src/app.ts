@@ -67,7 +67,7 @@ app.set('view engine', 'ejs');
 
 
 // Static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Sessions
 app.use(
