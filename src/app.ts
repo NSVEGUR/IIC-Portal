@@ -61,7 +61,7 @@ app.use(hpp({
 
 //View Engine
 app.use(expressLayouts);
-app.set('layout', path.join(__dirname, 'views/layouts/main'));
+app.set('layout', path.join(__dirname, 'views/layouts/base'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -96,8 +96,8 @@ app.get('/', function (req, res, next) {
 
 
 // // Routes
-// app.use('/', indexRouter);
-// app.use('/auth', authRouter);
+app.use('/', indexRouter);
+app.use('/auth', authRouter);
 // app.use('/stories', storyRouter);
 
 //UNUSED ROUTES MIDDLEWARE

@@ -29,6 +29,7 @@ const autoLogin = catchAsync(async function (req: any, res: Response, next: Next
 	{
 		const stories = await StoryModel.find({ user: req.user.id }).lean()
 		res.render('dashboard', {
+			layout: 'layouts/main',
 			name: req.user.firstName,
 			stories,
 		})
