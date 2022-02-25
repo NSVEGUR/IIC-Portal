@@ -59,6 +59,7 @@ app.use(hpp({
 	whitelist: []//Parameters for which we don't wanna restrict duplications
 }));
 
+const publicDirectory = path.join(__dirname, '../public');
 
 //View Engine
 app.locals = ejsLocals;
@@ -69,7 +70,7 @@ app.set('view engine', 'ejs');
 
 
 // Static folder
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(publicDirectory));
 
 // Sessions
 app.use(

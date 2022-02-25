@@ -1,6 +1,51 @@
-<main class="p-3 md:pl-16">
-	<h3>Welcome <%= name %>
+<main class="w-3/4 m-auto mt-10">
+	<h3 class="text-5xl">Welcome <%= name %>
 	</h3>
-	<p>Here are your Ideas</p>
-	<%- include('partials/_floating_button.ejs') %>
+	<% if(stories.length> 0){ %>
+		<p class="text-2xl mt-5">Here are your Ideas</p>
+		<div class="grid place-items-center rounded-xl overflow-hidden bg-gradient-to-r from-slate-50 to-blue-50 p-10">
+			<table class="table-auto">
+				<thead>
+					<tr>
+						<th class="px-4 py-2 text-black-600">Title</th>
+						<th class="px-4 py-2 text-black-600">Date</th>
+						<th class="px-4 py-2 text-black-600">Person</th>
+						<th class="px-4 py-2 text-black-600">fifth</th>
+						<th class="px-4 py-2 text-black-600">sixth</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% stories.forEach(story=> { %>
+						<tr>
+							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
+								<a href="/stories/<%=story._id  %>">
+									<%= story.title %>
+								</a>
+							</td>
+							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
+								<div>
+									<%- formatDate(story.createdAt, 'MMMM Do YYYY, h:mm:ss a' ) %>
+								</div>
+							</td>
+							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
+								<a href="/stories/user/<%= story.user._id %>">
+									<%= story.user.displayName %>
+								</a>
+							</td>
+							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
+								<div>
+									<%= story.status %>
+								</div>
+							</td>
+							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium"><a
+									href="/stories/<%= story._id %>">Read More</a></td>
+						</tr>
+						<% }) %>
+				</tbody>
+			</table>
+		</div>
+		<% } else { %>
+			<p class="text-xl mt-5 text-gray-500">You got not ideas to display yet</p>
+			<% } %>
+				<%- include('partials/_floating_button.ejs') %>
 </main>

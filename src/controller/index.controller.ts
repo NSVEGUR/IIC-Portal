@@ -31,8 +31,9 @@ const autoLogin = catchAsync(async function (req: any, res: Response, next: Next
 		res.render('dashboard', {
 			layout: 'layouts/main',
 			name: req.user.firstName,
+			image: req.user.image,
 			stories,
-		})
+		});
 	}
 })
 

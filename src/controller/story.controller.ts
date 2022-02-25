@@ -5,7 +5,9 @@ import { StoryModel } from './../models/story.model';
 
 
 const renderAddStory = catchAsync(async function (req: Request, res: Response, next: NextFunction) {
-	res.render('stories/add');
+	res.render('stories/add', {
+		layout: 'layouts/main',
+	});
 })
 
 const addStory = catchAsync(async function (req: any, res: Response, next: NextFunction) {
