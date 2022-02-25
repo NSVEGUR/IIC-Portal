@@ -104,6 +104,7 @@ const getUserStories = catchAsync(async function (req: any, res: Response, next:
 
 	res.render('stories/index', {
 		stories,
+		layout: 'layouts/main',
 	});
 })
 

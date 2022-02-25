@@ -15,12 +15,12 @@
 					<% stories.forEach(story=> { %>
 						<tr>
 							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
-								<a href="/stories/<%=story._id  %>">
+								<a href="/stories/<%=story._id  %>" class="text-blue-900">
 									<%= story.title %>
 								</a>
 							</td>
 							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
-								<div>
+								<div class="text-gray-400">
 									<%- formatDate(story.createdAt, 'MMMM Do YYYY, h:mm:ss a' ) %>
 								</div>
 							</td>
@@ -30,12 +30,12 @@
 								</a>
 							</td>
 							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium">
-								<div>
+								<div class="text-gray-400">
 									<%= story.status %>
 								</div>
 							</td>
 							<td class="border border-black-500 px-4 py-2 text-black-600 font-medium"><a
-									href="/stories/<%= story._id %>">Read More</a></td>
+									href="/stories/<%= story._id %>" class="text-blue-900">Read More</a></td>
 						</tr>
 						<% }) %>
 				</tbody>

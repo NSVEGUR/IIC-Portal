@@ -1,48 +1,98 @@
-<div class="row">
-	<div class="col s12 m8">
-		<h3>{{story.title}}
-			<small>{{{editIcon story.user user story._id false}}}</small>
-		</h3>
-		<div class="card story">
-			<div class="card-content">
-				<span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
-				{{{story.body}}}<br>
-				{{{story.status1}}}<br>
-				{{{story.status2}}}<br>
-				{{{story.status3}}}<br>
-				{{{story.status4}}}<br>
-				{{{story.status5}}}<br>
-				{{{story.status6}}}<br>
-				{{{story.status7}}}<br>
-				{{{story.status8}}}<br>
-				{{{story.status9}}}<br>
-				{{{story.status10}}}<br>
-				{{{story.status11}}}<br>
-				{{{story.status12}}}<br>
-				{{{story.status13}}}<br>
-				{{{story.status14}}}<br>
-				{{{story.status15}}}<br>
-				{{{story.status16}}}<br>
-				{{{story.status17}}}<br>
-				{{{story.status18}}}<br>
-				{{{story.status19}}}<br>
-				{{{story.status20}}}<br>
-				{{{story.status21}}}<br>
-				{{{story.status1}}}<br>
-
-				{{{story.title2}}}
+<main class="w-3/4 m-auto mb-10">
+	<h1 class="text-5xl text-center my-10 uppercase border-b-2 pb-4 border-gray-300">
+		<%= story.title %>
+	</h1>
+	<div class="flex gap-8 items-start">
+		<div class="w-2/3 p-10 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border border-gray-200 shadow-md">
+			<h1 class="card-title text-2xl mb-4 text-blue-900">
+				<%- formatDate(story.createdAt, 'MMMM Do YYYY, h:mm:ss a' ) %>
+					<h1>
+						<div>
+							<%=story.status1 %>
+						</div>
+						<div>
+							<%=story.status2 %>
+						</div>
+						<div>
+							<%=story.status3 %>
+						</div>
+						<div>
+							<%=story.status4 %>
+						</div>
+						<div>
+							<%=story.status5 %>
+						</div>
+						<div>
+							<%=story.status6 %>
+						</div>
+						<div>
+							<%=story.status7 %>
+						</div>
+						<div>
+							<%=story.status8 %>
+						</div>
+						<div>
+							<%=story.status9 %>
+						</div>
+						<div>
+							<%=story.status10 %>
+						</div>
+						<div>
+							<%=story.status11 %>
+						</div>
+						<div>
+							<%=story.status12 %>
+						</div>
+						<div>
+							<%=story.status13 %>
+						</div>
+						<div>
+							<%=story.status14 %>
+						</div>
+						<div>
+							<%=story.status15 %>
+						</div>
+						<div>
+							<%=story.status16 %>
+						</div>
+						<div>
+							<%=story.status17 %>
+						</div>
+						<div>
+							<%=story.status18 %>
+						</div>
+						<div>
+							<%=story.status19 %>
+						</div>
+						<div>
+							<%=story.status20 %>
+						</div>
+						<div>
+							<%=story.status21 %>
+						</div>
+						<div>
+							<%=story.status1 %>
+						</div>
+						<div>
+							<%=story.title %>
+						</div>
+		</div>
+		<div class="w-1/3 max-w-sm bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border border-gray-200 shadow-md">
+			<div class="flex flex-col items-center py-10">
+				<img class="mb-3 w-24 h-24 rounded-full shadow-lg" src=<%=story.user.image %> alt="<%= story.user.firstName %>
+					image">
+					<h3 class="mb-1 text-xl font-medium text-gray-900">
+						<%= story.user.firstName %>
+					</h3>
+					<span class="text-sm text-gray-500 dark:text-gray-400">
+						<%= story.user.displayName %>
+					</span>
+					<div class="flex mt-4 space-x-3 lg:mt-6">
+						<a href="/stories/user/<%= story.user._id %>"
+							class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-900 rounded-lg hover:bg-blue-800 hover:shadow-lg">More
+							from <%= story.user.firstName %> </a>
+					</div>
 			</div>
 		</div>
 	</div>
-	<div class="col s12 m4">
-		<div class="card center-align">
-			<div class="card-content">
-				<span class="card-title">{{story.user.displayName}}</span>
-				<img src="{{story.user.image}}" class="circle responsive-img img-small">
-			</div>
-			<div class="card-action">
-				<a href="/stories/user/{{story.user._id}}">More From {{story.user.firstName}}</a>
-			</div>
-		</div>
-	</div>
-</div>
+</main>
