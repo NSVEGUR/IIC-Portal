@@ -25,7 +25,7 @@ require('./config/passport.config')(passport);
 
 const app: Express = express();
 
-app.use(helmet());
+// app.use(helmet());
 
 
 if (config.NODE_ENV == 'development') {
@@ -48,7 +48,7 @@ app.use(
 	})
 )
 
-//Data Sanitisation against NoSQL query injection
+// Data Sanitisation against NoSQL query injection
 app.use(ExpressMongoSanitize());
 
 //Data Sanitisation against XSS
