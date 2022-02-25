@@ -14,6 +14,7 @@ import expressLayouts from 'express-ejs-layouts';
 const MongoStore = require('connect-mongo')(session);
 import AppError from './util/appError.util';
 import errorHandler from './controller/error.controller';
+import ejsLocals from './util/ejs';
 import authRouter from './routes/auth.route';
 import indexRouter from './routes/index.route';
 import storyRouter from './routes/story.route';
@@ -60,6 +61,7 @@ app.use(hpp({
 
 
 //View Engine
+app.locals = ejsLocals;
 app.use(expressLayouts);
 app.set('layout', path.join(__dirname, 'views/layouts/base'));
 app.set('views', path.join(__dirname, 'views'));
@@ -98,7 +100,7 @@ app.get('/', function (req, res, next) {
 // // Routes
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
-// app.use('/stories', storyRouter);
+app.use('/stories', storyRouter);
 
 //UNUSED ROUTES MIDDLEWARE
 app.use('*', (req: Request, res: Response, next: NextFunction) => {

@@ -22,6 +22,7 @@ const getAllStories = catchAsync(async function (req: Request, res: Response, ne
 
 	res.render('stories/index', {
 		stories,
+		layout: 'layouts/main',
 	})
 });
 
@@ -35,6 +36,7 @@ const getStory = catchAsync(async function (req: any, res: Response, next: NextF
 	} else {
 		res.render('stories/show', {
 			story,
+			layout: 'layouts/main',
 		})
 	}
 

@@ -1,0 +1,37 @@
+<h1>Ideas</h1>
+<% if(stories){ %>
+	<table class="striped">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Date</th>
+				<th>Person</th>
+				<th></th>
+				<th>fifth</th>
+				<th>sixth</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% stories.forEach(story=> { %>
+				<tr>
+					<td><a href="/stories/<%=story._id  %>">
+							<%= story.title %>
+						</a></td>
+					<td>
+						<%- formatDate(story.createdAt, 'MMMM Do YYYY, h:mm:ss a' ) %>
+					</td>
+					<td><a href="/stories/user/<%= story.user._id %>">
+							<%= story.user.displayName %>
+						</a>
+					<td>
+					<td><span class="dash-status">
+							<%= story.status %>
+						</span></td>
+					<td><a href="/stories/<%= story._id %>" class="btn grey">Read More</a></td>
+				</tr>
+				<% }) %>
+		</tbody>
+	</table>
+	<% } else { %>
+		<p>No Ideas to display</p>
+		<% } %>

@@ -460,6 +460,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .static {
   position: static;
 }
+.fixed {
+  position: fixed;
+}
+.bottom-10 {
+  bottom: 2.5rem;
+}
+.right-10 {
+  right: 2.5rem;
+}
 .order-first {
   order: -9999;
 }
@@ -631,6 +640,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .p-1 {
   padding: 0.25rem;
@@ -817,6 +829,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:p-3 {
     padding: 0.75rem;
+  }
+
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .md\:pl-16 {
